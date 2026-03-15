@@ -16,9 +16,14 @@ let dragging = false;
 let lastX = 0;
 let rotation = 0;
 
-const maxSpeed = 10; // limit rotation per frame
+const maxSpeed = 10;
 
 handle.addEventListener("mousedown", e => {
+    dragging = true;
+    lastX = e.clientX;
+});
+
+carousel.addEventListener("mousedown", e => {
     dragging = true;
     lastX = e.clientX;
 });

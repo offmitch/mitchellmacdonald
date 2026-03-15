@@ -5,8 +5,8 @@
 body {
     font-family: Arial, sans-serif;
     background-image: url('images/background.jpg');
-    overflow-y: hidden;
-    overflow-x: hidden;
+    /* overflow-y: hidden;
+    overflow-x: hidden; */
 }
 
 .main-container {
@@ -306,6 +306,51 @@ a:hover {
     font-weight: bold;
 }
 
+.skills-grid {
+    margin-top: 10px;
+    padding: 20px 40px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: rgba(255,255,255,0.7);
+    border-radius: 12px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.25s ease;
+    backdrop-filter: blur(4px);
+}
+
+.skill-card img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.skill-card span {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.2),
+        0 0 15px rgba(0,150,255,0.5);
+}
+
+
+
 @media (max-width: 768px) {
 
     *{
@@ -332,8 +377,19 @@ a:hover {
     }
 
     .headshot {
-        width: 220px;
-        height: 220px;
+        order: -1;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;   
+        object-fit: cover;
+        object-position: 50% 30%;
+    }
+
+    .headshot img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 40% 10%;
     }
 
     .links {
