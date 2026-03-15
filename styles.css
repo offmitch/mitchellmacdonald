@@ -1,7 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-image: url('images/background.jpg');
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .main-container {
@@ -36,19 +41,23 @@ body {
     font-size: 2em;
     color: #000000;
     text-align: center;
-    
+    align-items: center;
 }
 
-.bio{
-    height: 100px;
-    width: 800px;
+.bio {
+    max-width: 800px;
+    width: 100%;
+    min-height: 100px;
+    margin: 0 auto;
     font-size: .7em;
     color: #ffffff;
     background-color: rgb(0, 128, 255);
     text-align: center;
-    padding: 5px;
+    padding: 10px;
     border-radius: 8px;
-    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .headshot {
@@ -258,7 +267,6 @@ a:hover {
     transition: transform 0.4s ease;
 }
 
-/* overlay */
 
 .project-overlay {
     position: absolute;
@@ -296,4 +304,69 @@ a:hover {
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+    *{
+        overflow-y: auto;
+    }
+
+    .main-container {
+        margin: 10px;
+        height: auto;
+    }
+
+    .top-section {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 10px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+     .header p {
+        font-size: 0.95rem;
+    }
+
+    .headshot {
+        width: 220px;
+        height: 220px;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0;
+        width: 100%;
+    }
+
+    .bio {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+
+    .carousel {
+        width: 95%;
+        height: 350px;
+        margin: 40px auto;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info {
+        font-size: 1.2em;
+    }
+
+    .contact-icon {
+        width: 120px;
+        height: 120px;
+    }
+
 }
