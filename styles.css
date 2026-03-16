@@ -409,6 +409,7 @@ a:hover {
         width: 95%;
         height: 350px;
         margin: 40px auto;
+        display: none;
     }
 
     .contact-container {
