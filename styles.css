@@ -755,6 +755,10 @@ img {
         padding-right: 20px;
         width: calc(100% - 40px);
     }
+
+    .project-overlay{
+        opacity: 1;
+    }
 }
 
 @media (max-width: 480px) {
