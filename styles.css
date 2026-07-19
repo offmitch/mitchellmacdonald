@@ -312,6 +312,11 @@ img {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+
+  .project-overlay{
+    
+    opacity: 1;
+  }
 }
 
 @media (max-width: 600px) {
@@ -330,5 +335,9 @@ img {
 
   .project-card img {
     height: 200px;
+  }
+
+  .project-overlay {
+    opacity: 1;
   }
 }
