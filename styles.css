@@ -314,8 +314,8 @@ img {
   }
 
   .project-overlay{
-    
     opacity: 1;
+    font-size: 0.8rem;
   }
 }
 
